@@ -1,0 +1,16 @@
+# Python
+/.venv/
+/quizbackend/venv/
+__pycache__/
+*.pyc
+instance/
+.env
+
+# Node.js
+/finalquiz/node_modules/
+/finalquiz/build/
+
+# Other
+*.db
+*.sqlite3
+.DS_Store

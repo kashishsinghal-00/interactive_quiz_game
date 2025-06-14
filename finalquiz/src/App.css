@@ -1,0 +1,158 @@
+.App {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.quiz-container {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 600px;
+  background-color: #f9f9f9;
+}
+
+.question-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.options-section button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.options-section button:hover {
+  background-color: #0056b3;
+}
+/* Add this to the top of your Quiz.css or App.css */
+body {
+  background-color: #121212; /* Dark black/grey color */
+  color: #e0e0e0; /* Light grey text color for contrast */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Adjust .App if you want the main app container to have specific dark styling too */
+.App {
+  text-align: center;
+  /* If body has dark background, .App might not need its own background color
+     unless you want a different shade or padding. */
+}
+
+/* Update quiz container for dark theme */
+.quiz-container {
+  margin: 40px auto; /* Added more margin for body background visibility */
+  padding: 25px;
+  border: 1px solid #333; /* Darker border */
+  border-radius: 10px;
+  max-width: 650px;
+  background-color: #1e1e1e; /* Slightly lighter dark shade for the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Adjusted shadow for dark theme */
+  color: #e0e0e0; /* Ensure text inside quiz is light */
+}
+/* Add this to your Quiz.css or App.css */
+
+/* Parent container for perspective (optional, but helps with 3D effect) */
+.App { /* Or any direct parent of .quiz-container */
+  perspective: 1000px; /* This enables the 3D space for child elements */
+}
+
+.quiz-container {
+  /* ... (existing styles from above for dark theme) ... */
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  /* transform-style: preserve-3d; (Uncomment if you add 3D children later) */
+}
+
+.quiz-container:hover {
+  transform: rotateY(5deg) rotateX(2deg) scale(1.02); /* Slight tilt and scale on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* More pronounced shadow on hover */
+}
+
+/* You can also add subtle animations to buttons or questions on hover/focus */
+.options-section button {
+  /* ... (existing styles) ... */
+  transition: transform 0.2s ease, background-color 0.2s ease-in-out;
+}
+
+.options-section button:hover:not(:disabled) {
+  /* ... (existing hover background-color) ... */
+  transform: translateY(-3px) scale(1.03); /* Button lifts slightly and scales up */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.options-section button:active:not(:disabled) {
+  transform: translateY(-1px) scale(1.01); /* Slight press down effect */
+}
+
+/* Ensure button text color is good on dark theme options */
+.options-section button {
+  background-color: #0059b3; /* Darker blue base */
+  color: white;
+  /* ... other styles */
+}
+
+.options-section button:hover:not(:disabled) {
+  background-color: #007bff; /* Lighter blue on hover */
+}
+
+/* Adjust feedback and score sections for dark theme */
+.feedback-section {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #2a2a2a; /* Darker background for feedback */
+}
+
+.feedback-correct {
+  color: #34c759; /* Bright green for correct */
+  font-weight: bold;
+}
+
+.feedback-incorrect {
+  color: #ff3b30; /* Bright red for incorrect */
+  font-weight: bold;
+}
+
+.next-button, .score-section button {
+  /* ... (existing styles) ... */
+  background-color: #34c759; /* Green for next/restart */
+  color: white;
+}
+
+.next-button:hover, .score-section button:hover {
+  background-color: #2ca349; /* Darker green on hover */
+}
+
+/* Ensure question text is clearly visible */
+.question-section h3 {
+    color: #150b0b;
+}
+.question-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #dcdcdc; /* Lighter grey for question text */
+}
+/* Pehle se maujood .quiz-container styles ke baad yeh add karein */
+
+.quiz-container h2 { /* Targeting the "Quiz Game" title */
+  color: #194046;   /* React logo ka blue color, ya aap apna pasandida color istemal kar sakte hain */
+  font-size: 2.5em;  /* Font size thoda bada */
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #555; /* Title ke neeche ek line */
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Thoda text shadow */
+}

@@ -1,0 +1,102 @@
+/* src/Quiz.css (ya App.css mein bhi daal sakte hain) */
+.quiz-container {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.options-section button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.options-section button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.options-section button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Feedback ke liye classes */
+.options-section button.correct {
+  background-color: #28a745; /* Green */
+}
+
+.options-section button.incorrect {
+  background-color: #dc3545; /* Red */
+}
+
+.feedback-section {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.feedback-correct {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.feedback-incorrect {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.next-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #4cae4c;
+}
+
+.score-section {
+  text-align: center;
+}
+
+.score-section p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.score-section button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.score-section button:hover {
+  background-color: #0056b3;
+}
